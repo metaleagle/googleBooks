@@ -8,6 +8,12 @@
 
 protocol LoginInteractorProtocol{
     var presenter: LoginPresenterProtocol? { get set }
-    func fbloginRequested()
-    func gpRequested()
+    var fbAuthorizer: AuthorizerProtocol? { get set }
+    var gpAuthorizer: AuthorizerProtocol? { get set }
+    func fbLoginRequested()
+    func gpLoginRequested()
+    func authorized(withAuthorizer authorizer: AuthorizerProtocol, withUserInfo info: UserInfoProtocol)
+    func authorizationFailed(withAuthorizer authorizer: AuthorizerProtocol, withError error: String)
+    func authorizationCanceled(withAuthorizer authorizer: AuthorizerProtocol)
+    func loggedOut(withAuthorizer authorizer: AuthorizerProtocol)
 }

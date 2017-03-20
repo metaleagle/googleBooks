@@ -6,4 +6,7 @@
 //  Copyright © 2017 MetalEaglE. All rights reserved.
 //
 
-import Foundation
+protocol UserProfileInteractorProtocol {
+    var presenter: UserProfilePresenterProtocol? {set get}
+    func getUserProfile() ->UserInfoProtocol
+}

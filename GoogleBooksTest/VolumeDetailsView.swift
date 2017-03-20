@@ -29,6 +29,8 @@ class VolumeDetailsViewController: UIViewController, VolumeDetailsViewProtocol{
         
         self.presenter?.setupView()
         self.presenter?.getVolumeDetails()
+        
+        self.title = "Item details"
     }
     
     func addToCartAction(_ sender: Any) {

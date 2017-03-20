@@ -1,6 +1,6 @@
 //
 //  GPAuthorizer.swift
-//  FBLoginTest
+//  GoogleBooksTest
 //
 //  Created by Андрей Данишевский on 13.03.17.
 //  Copyright © 2017 MetalEaglE. All rights reserved.
@@ -41,11 +41,6 @@ class GPAuthorizer: NSObject, AuthorizerProtocol, GIDSignInDelegate, GIDSignInUI
             }
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
-            
-            print("Google+ profile info: \n name: \(givenName) \n last name: \(familyName) \n email: \(email)")
-            if user.profile.hasImage{
-                print("Userpic URL: \(user.profile.imageURL(withDimension: 200))")
-            }
             self.interactor.authorized(withAuthorizer: self, withUserInfo: UserInfo(firstName: givenName, lastName: familyName, email: email, userpicURL: user.profile.imageURL(withDimension: 200).absoluteString))
         } else {
             self.interactor.authorizationFailed(withAuthorizer: self, withError: error.localizedDescription)

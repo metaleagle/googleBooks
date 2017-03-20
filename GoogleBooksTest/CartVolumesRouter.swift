@@ -9,6 +9,7 @@ import UIKit
 class CartVolumesRouter: VolumesListRouterProtocol{
     class func listVolumesModule() -> UIViewController{
         let view = VolumesListViewController(style: .plain)
+        view.title = "Cart"
         let presenter = VolumesListPresenter()
         let interactor = VolumesListInteractor()
         let dataStorage = CartVolumesDataStorage()

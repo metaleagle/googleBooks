@@ -1,6 +1,6 @@
 //
 //  FBAuthorizer.swift
-//  FBLoginTest
+//  GoogleBooksTest
 //
 //  Created by Андрей Данишевский on 13.03.17.
 //  Copyright © 2017 MetalEaglE. All rights reserved.
@@ -37,8 +37,6 @@ class FBAuthorizer: AuthorizerProtocol{
             switch result {
             case .success(let response):
                 if let responseDictionary = response.dictionaryValue{
-                    var mockDict = responseDictionary
-                    mockDict.removeValue(forKey: "last_name")
                     if let userInfo = UserInfo(responseDictionary){
                         self.interactor.authorized(withAuthorizer: self, withUserInfo: userInfo)
                     }
@@ -75,6 +73,8 @@ extension UserInfo {
             let url = data?["url"] as? String
             self.init(firstName: name, lastName: lastName, email: email, userpicURL: url)
         }
-        return nil
+        else{
+            return nil
+        }
     }
 }

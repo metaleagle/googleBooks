@@ -6,4 +6,9 @@
 //  Copyright © 2017 MetalEaglE. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol LoginRouterProtocol {
+    static func loginModule() -> UIViewController
+    func didLogin(with userInfo: UserInfoProtocol, inView view: LoginViewProtocol)
+}

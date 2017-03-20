@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'GoogleBooksTest' do
+use_frameworks!
+pod 'FacebookLogin'
+pod 'FacebookCore'
+pod 'Google/SignIn'
+pod 'Kingfisher', '~> 3.0'
+end

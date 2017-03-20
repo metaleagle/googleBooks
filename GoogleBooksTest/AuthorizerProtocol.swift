@@ -1,6 +1,6 @@
 //
 //  AuthorizerProtocol.swift
-//  FBLoginTest
+//  GoogleBooksTest
 //
 //  Created by Андрей Данишевский on 13.03.17.
 //  Copyright © 2017 MetalEaglE. All rights reserved.

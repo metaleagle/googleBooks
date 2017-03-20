@@ -7,21 +7,150 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		479BD18CFA2C5042E524964E /* Pods_GoogleBooksTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52416698B15211983CC9559C /* Pods_GoogleBooksTest.framework */; };
 		779069D11E718E2F00714E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069D01E718E2F00714E1A /* AppDelegate.swift */; };
-		779069D31E718E2F00714E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069D21E718E2F00714E1A /* ViewController.swift */; };
+		779069D31E718E2F00714E1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069D21E718E2F00714E1A /* LoginView.swift */; };
 		779069D61E718E2F00714E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779069D41E718E2F00714E1A /* Main.storyboard */; };
 		779069D81E718E2F00714E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 779069D71E718E2F00714E1A /* Assets.xcassets */; };
 		779069DB1E718E2F00714E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779069D91E718E2F00714E1A /* LaunchScreen.storyboard */; };
+		779069EA1E718FB100714E1A /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069E91E718FB100714E1A /* LoginViewProtocol.swift */; };
+		779069EC1E7190F800714E1A /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069EB1E7190F800714E1A /* LoginInteractorProtocol.swift */; };
+		779069F11E7193C700714E1A /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069F01E7193C700714E1A /* LoginPresenterProtocol.swift */; };
+		779069F31E71AF7F00714E1A /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069F21E71AF7F00714E1A /* LoginRouterProtocol.swift */; };
+		779069F51E71B56C00714E1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 779069F41E71B56C00714E1A /* GoogleService-Info.plist */; };
+		779069F71E71BB9700714E1A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069F61E71BB9700714E1A /* LoginPresenter.swift */; };
+		779069F91E71BCA400714E1A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069F81E71BCA400714E1A /* LoginRouter.swift */; };
+		779069FB1E71BDE700714E1A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069FA1E71BDE700714E1A /* LoginInteractor.swift */; };
+		779069FD1E71CE4900714E1A /* UserInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779069FC1E71CE4900714E1A /* UserInfoProtocol.swift */; };
+		E9CE7AB11E7F62EC0027FACF /* AuthorizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AB01E7F62EC0027FACF /* AuthorizerProtocol.swift */; };
+		E9CE7AB51E7F636A0027FACF /* FBAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AB31E7F636A0027FACF /* FBAuthorizer.swift */; };
+		E9CE7AB61E7F636A0027FACF /* GPAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AB41E7F636A0027FACF /* GPAuthorizer.swift */; };
+		E9CE7AB81E7F63E10027FACF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AB71E7F63E10027FACF /* UserInfo.swift */; };
+		E9CE7AC11E7F6FED0027FACF /* UserProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AC01E7F6FED0027FACF /* UserProfileViewProtocol.swift */; };
+		E9CE7AC31E7F734C0027FACF /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AC21E7F734C0027FACF /* UserProfileView.swift */; };
+		E9CE7AC51E7F75600027FACF /* UserProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AC41E7F75600027FACF /* UserProfilePresenterProtocol.swift */; };
+		E9CE7AC71E7F77B20027FACF /* UserProfileInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AC61E7F77B20027FACF /* UserProfileInteractorProtocol.swift */; };
+		E9CE7AC91E7F78790027FACF /* UserProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AC81E7F78790027FACF /* UserProfilePresenter.swift */; };
+		E9CE7ACB1E7F7C090027FACF /* UserProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ACA1E7F7C090027FACF /* UserProfileInteractor.swift */; };
+		E9CE7ACD1E7F7CF90027FACF /* UserProfileRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ACC1E7F7CF90027FACF /* UserProfileRouterProtocol.swift */; };
+		E9CE7ACF1E7F7D560027FACF /* UserProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ACE1E7F7D560027FACF /* UserProfileRouter.swift */; };
+		E9CE7AD31E7F837E0027FACF /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AD11E7F837E0027FACF /* RequestAPI.swift */; };
+		E9CE7AD41E7F837E0027FACF /* RequestAPIProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AD21E7F837E0027FACF /* RequestAPIProtocols.swift */; };
+		E9CE7AD81E7F83CA0027FACF /* UISearchBar+ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AD61E7F83CA0027FACF /* UISearchBar+ActivityView.swift */; };
+		E9CE7AD91E7F83CA0027FACF /* UITableViewCell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AD71E7F83CA0027FACF /* UITableViewCell+Reuse.swift */; };
+		E9CE7ADF1E7F84410027FACF /* Volume+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ADB1E7F84410027FACF /* Volume+CoreDataProperties.swift */; };
+		E9CE7AE01E7F84410027FACF /* Volume+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ADC1E7F84410027FACF /* Volume+CoreDataClass.swift */; };
+		E9CE7AE11E7F84410027FACF /* Volumes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7ADD1E7F84410027FACF /* Volumes.xcdatamodeld */; };
+		E9CE7B041E7F84BD0027FACF /* CartVolumesDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE21E7F84BD0027FACF /* CartVolumesDataStorage.swift */; };
+		E9CE7B051E7F84BD0027FACF /* CartVolumesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE31E7F84BD0027FACF /* CartVolumesRouter.swift */; };
+		E9CE7B061E7F84BD0027FACF /* SearchVolumesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE41E7F84BD0027FACF /* SearchVolumesListInteractor.swift */; };
+		E9CE7B071E7F84BD0027FACF /* SearchVolumesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE51E7F84BD0027FACF /* SearchVolumesListPresenter.swift */; };
+		E9CE7B081E7F84BD0027FACF /* SearchVolumesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE61E7F84BD0027FACF /* SearchVolumesListPresenterProtocol.swift */; };
+		E9CE7B091E7F84BD0027FACF /* SearchVolumesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE71E7F84BD0027FACF /* SearchVolumesRouter.swift */; };
+		E9CE7B0A1E7F84BD0027FACF /* VolumeDetailsLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE81E7F84BD0027FACF /* VolumeDetailsLocalStorage.swift */; };
+		E9CE7B0B1E7F84BD0027FACF /* VolumeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AE91E7F84BD0027FACF /* VolumeDetailsPresenter.swift */; };
+		E9CE7B0C1E7F84BD0027FACF /* VolumeDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AEA1E7F84BD0027FACF /* VolumeDetailsRouter.swift */; };
+		E9CE7B0D1E7F84BD0027FACF /* VolumeDetailsUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AEB1E7F84BD0027FACF /* VolumeDetailsUIProtocol.swift */; };
+		E9CE7B0E1E7F84BD0027FACF /* VolumeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AEC1E7F84BD0027FACF /* VolumeDetailsView.swift */; };
+		E9CE7B0F1E7F84BD0027FACF /* VolumeItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AED1E7F84BD0027FACF /* VolumeItemDetails.swift */; };
+		E9CE7B101E7F84BD0027FACF /* VolumesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AEE1E7F84BD0027FACF /* VolumesListPresenter.swift */; };
+		E9CE7B111E7F84BD0027FACF /* VolumesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AEF1E7F84BD0027FACF /* VolumesListPresenterProtocol.swift */; };
+		E9CE7B121E7F84BD0027FACF /* SearchVolumesListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF01E7F84BD0027FACF /* SearchVolumesListInteractorProtocol.swift */; };
+		E9CE7B131E7F84BD0027FACF /* SearchVolumesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF11E7F84BD0027FACF /* SearchVolumesListView.swift */; };
+		E9CE7B141E7F84BD0027FACF /* VolumeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF21E7F84BD0027FACF /* VolumeDetailsInteractor.swift */; };
+		E9CE7B151E7F84BD0027FACF /* VolumeDetailsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF31E7F84BD0027FACF /* VolumeDetailsInteractorProtocol.swift */; };
+		E9CE7B161E7F84BD0027FACF /* VolumeDetailsLocalStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF41E7F84BD0027FACF /* VolumeDetailsLocalStorageProtocol.swift */; };
+		E9CE7B171E7F84BD0027FACF /* VolumeDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF51E7F84BD0027FACF /* VolumeDetailsPresenterProtocol.swift */; };
+		E9CE7B181E7F84BD0027FACF /* VolumeDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF61E7F84BD0027FACF /* VolumeDetailsRouterProtocol.swift */; };
+		E9CE7B191E7F84BD0027FACF /* VolumeDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF71E7F84BD0027FACF /* VolumeDetailsViewProtocol.swift */; };
+		E9CE7B1A1E7F84BD0027FACF /* VolumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF81E7F84BD0027FACF /* VolumeItem.swift */; };
+		E9CE7B1B1E7F84BD0027FACF /* VolumeItemUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AF91E7F84BD0027FACF /* VolumeItemUIProtocol.swift */; };
+		E9CE7B1C1E7F84BD0027FACF /* VolumeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AFA1E7F84BD0027FACF /* VolumeListCell.swift */; };
+		E9CE7B1D1E7F84BD0027FACF /* VolumeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CE7AFB1E7F84BD0027FACF /* VolumeListCell.xib */; };
+		E9CE7B1E1E7F84BD0027FACF /* VolumesDataStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AFC1E7F84BD0027FACF /* VolumesDataStorageProtocol.swift */; };
+		E9CE7B1F1E7F84BD0027FACF /* VolumesListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AFD1E7F84BD0027FACF /* VolumesListCellProtocol.swift */; };
+		E9CE7B201E7F84BD0027FACF /* VolumesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AFE1E7F84BD0027FACF /* VolumesListInteractor.swift */; };
+		E9CE7B211E7F84BD0027FACF /* VolumesListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7AFF1E7F84BD0027FACF /* VolumesListInteractorProtocol.swift */; };
+		E9CE7B221E7F84BD0027FACF /* VolumesListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7B001E7F84BD0027FACF /* VolumesListRouterProtocol.swift */; };
+		E9CE7B231E7F84BD0027FACF /* VolumesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7B011E7F84BD0027FACF /* VolumesListView.swift */; };
+		E9CE7B241E7F84BD0027FACF /* VolumesListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7B021E7F84BD0027FACF /* VolumesListViewProtocol.swift */; };
+		E9CE7B251E7F84BD0027FACF /* VolumesSearchDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE7B031E7F84BD0027FACF /* VolumesSearchDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43A589420DCC704F5FC212C2 /* Pods-GoogleBooksTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleBooksTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleBooksTest/Pods-GoogleBooksTest.release.xcconfig"; sourceTree = "<group>"; };
+		52416698B15211983CC9559C /* Pods_GoogleBooksTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleBooksTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779069CD1E718E2F00714E1A /* GoogleBooksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779069D01E718E2F00714E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		779069D21E718E2F00714E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		779069D21E718E2F00714E1A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		779069D51E718E2F00714E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		779069D71E718E2F00714E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		779069DA1E718E2F00714E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		779069DC1E718E2F00714E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779069E91E718FB100714E1A /* LoginViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		779069EB1E7190F800714E1A /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
+		779069F01E7193C700714E1A /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		779069F21E71AF7F00714E1A /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
+		779069F41E71B56C00714E1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		779069F61E71BB9700714E1A /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		779069F81E71BCA400714E1A /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		779069FA1E71BDE700714E1A /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		779069FC1E71CE4900714E1A /* UserInfoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoProtocol.swift; sourceTree = "<group>"; };
+		CA1A0C1E9BDA8E073A1C2377 /* Pods-GoogleBooksTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleBooksTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleBooksTest/Pods-GoogleBooksTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E9CE7AAD1E7F61D30027FACF /* GoogleBooksTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleBooksTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9CE7AB01E7F62EC0027FACF /* AuthorizerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizerProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AB31E7F636A0027FACF /* FBAuthorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuthorizer.swift; sourceTree = "<group>"; };
+		E9CE7AB41E7F636A0027FACF /* GPAuthorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAuthorizer.swift; sourceTree = "<group>"; };
+		E9CE7AB71E7F63E10027FACF /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		E9CE7AC01E7F6FED0027FACF /* UserProfileViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AC21E7F734C0027FACF /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		E9CE7AC41E7F75600027FACF /* UserProfilePresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilePresenterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AC61E7F77B20027FACF /* UserProfileInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInteractorProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AC81E7F78790027FACF /* UserProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilePresenter.swift; sourceTree = "<group>"; };
+		E9CE7ACA1E7F7C090027FACF /* UserProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInteractor.swift; sourceTree = "<group>"; };
+		E9CE7ACC1E7F7CF90027FACF /* UserProfileRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileRouterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7ACE1E7F7D560027FACF /* UserProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileRouter.swift; sourceTree = "<group>"; };
+		E9CE7AD11E7F837E0027FACF /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
+		E9CE7AD21E7F837E0027FACF /* RequestAPIProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPIProtocols.swift; sourceTree = "<group>"; };
+		E9CE7AD61E7F83CA0027FACF /* UISearchBar+ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+ActivityView.swift"; sourceTree = "<group>"; };
+		E9CE7AD71E7F83CA0027FACF /* UITableViewCell+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reuse.swift"; sourceTree = "<group>"; };
+		E9CE7ADB1E7F84410027FACF /* Volume+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Volume+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E9CE7ADC1E7F84410027FACF /* Volume+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Volume+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E9CE7ADE1E7F84410027FACF /* Volumes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Volumes.xcdatamodel; sourceTree = "<group>"; };
+		E9CE7AE21E7F84BD0027FACF /* CartVolumesDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVolumesDataStorage.swift; sourceTree = "<group>"; };
+		E9CE7AE31E7F84BD0027FACF /* CartVolumesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVolumesRouter.swift; sourceTree = "<group>"; };
+		E9CE7AE41E7F84BD0027FACF /* SearchVolumesListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesListInteractor.swift; sourceTree = "<group>"; };
+		E9CE7AE51E7F84BD0027FACF /* SearchVolumesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesListPresenter.swift; sourceTree = "<group>"; };
+		E9CE7AE61E7F84BD0027FACF /* SearchVolumesListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesListPresenterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AE71E7F84BD0027FACF /* SearchVolumesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesRouter.swift; sourceTree = "<group>"; };
+		E9CE7AE81E7F84BD0027FACF /* VolumeDetailsLocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsLocalStorage.swift; sourceTree = "<group>"; };
+		E9CE7AE91E7F84BD0027FACF /* VolumeDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsPresenter.swift; sourceTree = "<group>"; };
+		E9CE7AEA1E7F84BD0027FACF /* VolumeDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsRouter.swift; sourceTree = "<group>"; };
+		E9CE7AEB1E7F84BD0027FACF /* VolumeDetailsUIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsUIProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AEC1E7F84BD0027FACF /* VolumeDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsView.swift; sourceTree = "<group>"; };
+		E9CE7AED1E7F84BD0027FACF /* VolumeItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeItemDetails.swift; sourceTree = "<group>"; };
+		E9CE7AEE1E7F84BD0027FACF /* VolumesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListPresenter.swift; sourceTree = "<group>"; };
+		E9CE7AEF1E7F84BD0027FACF /* VolumesListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListPresenterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF01E7F84BD0027FACF /* SearchVolumesListInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesListInteractorProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF11E7F84BD0027FACF /* SearchVolumesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVolumesListView.swift; sourceTree = "<group>"; };
+		E9CE7AF21E7F84BD0027FACF /* VolumeDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsInteractor.swift; sourceTree = "<group>"; };
+		E9CE7AF31E7F84BD0027FACF /* VolumeDetailsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsInteractorProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF41E7F84BD0027FACF /* VolumeDetailsLocalStorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsLocalStorageProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF51E7F84BD0027FACF /* VolumeDetailsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsPresenterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF61E7F84BD0027FACF /* VolumeDetailsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF71E7F84BD0027FACF /* VolumeDetailsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeDetailsViewProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AF81E7F84BD0027FACF /* VolumeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeItem.swift; sourceTree = "<group>"; };
+		E9CE7AF91E7F84BD0027FACF /* VolumeItemUIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeItemUIProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AFA1E7F84BD0027FACF /* VolumeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeListCell.swift; sourceTree = "<group>"; };
+		E9CE7AFB1E7F84BD0027FACF /* VolumeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumeListCell.xib; sourceTree = "<group>"; };
+		E9CE7AFC1E7F84BD0027FACF /* VolumesDataStorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesDataStorageProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AFD1E7F84BD0027FACF /* VolumesListCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListCellProtocol.swift; sourceTree = "<group>"; };
+		E9CE7AFE1E7F84BD0027FACF /* VolumesListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListInteractor.swift; sourceTree = "<group>"; };
+		E9CE7AFF1E7F84BD0027FACF /* VolumesListInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListInteractorProtocol.swift; sourceTree = "<group>"; };
+		E9CE7B001E7F84BD0027FACF /* VolumesListRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListRouterProtocol.swift; sourceTree = "<group>"; };
+		E9CE7B011E7F84BD0027FACF /* VolumesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListView.swift; sourceTree = "<group>"; };
+		E9CE7B021E7F84BD0027FACF /* VolumesListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesListViewProtocol.swift; sourceTree = "<group>"; };
+		E9CE7B031E7F84BD0027FACF /* VolumesSearchDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumesSearchDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +158,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479BD18CFA2C5042E524964E /* Pods_GoogleBooksTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B000B36C9F9B947582C462 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA1A0C1E9BDA8E073A1C2377 /* Pods-GoogleBooksTest.debug.xcconfig */,
+				43A589420DCC704F5FC212C2 /* Pods-GoogleBooksTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		779069C41E718E2E00714E1A = {
 			isa = PBXGroup;
 			children = (
 				779069CF1E718E2F00714E1A /* GoogleBooksTest */,
 				779069CE1E718E2F00714E1A /* Products */,
+				11B000B36C9F9B947582C462 /* Pods */,
+				FDBA1F2601E28401983F4D37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +195,461 @@
 		779069CF1E718E2F00714E1A /* GoogleBooksTest */ = {
 			isa = PBXGroup;
 			children = (
+				E9CE7ADA1E7F84180027FACF /* CoreData */,
+				E9CE7AD51E7F83A70027FACF /* Extensions */,
+				E9CE7AD01E7F836A0027FACF /* RequestAPI */,
+				779069E21E718F0600714E1A /* Modules */,
 				779069D01E718E2F00714E1A /* AppDelegate.swift */,
-				779069D21E718E2F00714E1A /* ViewController.swift */,
 				779069D41E718E2F00714E1A /* Main.storyboard */,
 				779069D71E718E2F00714E1A /* Assets.xcassets */,
 				779069D91E718E2F00714E1A /* LaunchScreen.storyboard */,
 				779069DC1E718E2F00714E1A /* Info.plist */,
+				779069F41E71B56C00714E1A /* GoogleService-Info.plist */,
+				E9CE7AAD1E7F61D30027FACF /* GoogleBooksTest-Bridging-Header.h */,
 			);
 			path = GoogleBooksTest;
+			sourceTree = "<group>";
+		};
+		779069E21E718F0600714E1A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7B3B1E7F87520027FACF /* VolumesList */,
+				E9CE7B341E7F867B0027FACF /* VolumeDetails */,
+				E9CE7B2D1E7F85FD0027FACF /* Cart */,
+				E9CE7B261E7F84D40027FACF /* BooksSearch */,
+				E9CE7AB91E7F6F490027FACF /* UserProfile */,
+				779069E31E718F1400714E1A /* Authorization */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		779069E31E718F1400714E1A /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AB21E7F63530027FACF /* Authorizers */,
+				E9CE7AAC1E7F5F0E0027FACF /* Protocols */,
+				779069E81E718F6200714E1A /* Router */,
+				779069E71E718F5300714E1A /* Entity */,
+				779069E61E718F4A00714E1A /* Presenter */,
+				779069E51E718F4200714E1A /* Interactor */,
+				779069E41E718F2D00714E1A /* View */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
+		779069E41E718F2D00714E1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				779069D21E718E2F00714E1A /* LoginView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		779069E51E718F4200714E1A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				779069FA1E71BDE700714E1A /* LoginInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		779069E61E718F4A00714E1A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				779069F61E71BB9700714E1A /* LoginPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		779069E71E718F5300714E1A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AB71E7F63E10027FACF /* UserInfo.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		779069E81E718F6200714E1A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				779069F81E71BCA400714E1A /* LoginRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7AAC1E7F5F0E0027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AB01E7F62EC0027FACF /* AuthorizerProtocol.swift */,
+				779069F21E71AF7F00714E1A /* LoginRouterProtocol.swift */,
+				779069FC1E71CE4900714E1A /* UserInfoProtocol.swift */,
+				779069F01E7193C700714E1A /* LoginPresenterProtocol.swift */,
+				779069EB1E7190F800714E1A /* LoginInteractorProtocol.swift */,
+				779069E91E718FB100714E1A /* LoginViewProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E9CE7AB21E7F63530027FACF /* Authorizers */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AB31E7F636A0027FACF /* FBAuthorizer.swift */,
+				E9CE7AB41E7F636A0027FACF /* GPAuthorizer.swift */,
+			);
+			name = Authorizers;
+			sourceTree = "<group>";
+		};
+		E9CE7AB91E7F6F490027FACF /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7ABF1E7F6FC20027FACF /* Entity */,
+				E9CE7ABE1E7F6F8E0027FACF /* Protocols */,
+				E9CE7ABD1E7F6F750027FACF /* Router */,
+				E9CE7ABC1E7F6F6B0027FACF /* Interactor */,
+				E9CE7ABB1E7F6F5F0027FACF /* Presenter */,
+				E9CE7ABA1E7F6F570027FACF /* View */,
+			);
+			name = UserProfile;
+			sourceTree = "<group>";
+		};
+		E9CE7ABA1E7F6F570027FACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AC21E7F734C0027FACF /* UserProfileView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9CE7ABB1E7F6F5F0027FACF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AC81E7F78790027FACF /* UserProfilePresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E9CE7ABC1E7F6F6B0027FACF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7ACA1E7F7C090027FACF /* UserProfileInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E9CE7ABD1E7F6F750027FACF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7ACE1E7F7D560027FACF /* UserProfileRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7ABE1E7F6F8E0027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AC01E7F6FED0027FACF /* UserProfileViewProtocol.swift */,
+				E9CE7AC41E7F75600027FACF /* UserProfilePresenterProtocol.swift */,
+				E9CE7AC61E7F77B20027FACF /* UserProfileInteractorProtocol.swift */,
+				E9CE7ACC1E7F7CF90027FACF /* UserProfileRouterProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E9CE7ABF1E7F6FC20027FACF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E9CE7AD01E7F836A0027FACF /* RequestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AD11E7F837E0027FACF /* RequestAPI.swift */,
+				E9CE7AD21E7F837E0027FACF /* RequestAPIProtocols.swift */,
+			);
+			name = RequestAPI;
+			sourceTree = "<group>";
+		};
+		E9CE7AD51E7F83A70027FACF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AD61E7F83CA0027FACF /* UISearchBar+ActivityView.swift */,
+				E9CE7AD71E7F83CA0027FACF /* UITableViewCell+Reuse.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E9CE7ADA1E7F84180027FACF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7ADB1E7F84410027FACF /* Volume+CoreDataProperties.swift */,
+				E9CE7ADC1E7F84410027FACF /* Volume+CoreDataClass.swift */,
+				E9CE7ADD1E7F84410027FACF /* Volumes.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		E9CE7B261E7F84D40027FACF /* BooksSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7B2C1E7F85070027FACF /* Protocols */,
+				E9CE7B2B1E7F84FF0027FACF /* Router */,
+				E9CE7B2A1E7F84F70027FACF /* Entity */,
+				E9CE7B291E7F84ED0027FACF /* Presenter */,
+				E9CE7B281E7F84E60027FACF /* Interactor */,
+				E9CE7B271E7F84DF0027FACF /* View */,
+			);
+			name = BooksSearch;
+			sourceTree = "<group>";
+		};
+		E9CE7B271E7F84DF0027FACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AF11E7F84BD0027FACF /* SearchVolumesListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9CE7B281E7F84E60027FACF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE41E7F84BD0027FACF /* SearchVolumesListInteractor.swift */,
+				E9CE7B031E7F84BD0027FACF /* VolumesSearchDataStorage.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E9CE7B291E7F84ED0027FACF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE51E7F84BD0027FACF /* SearchVolumesListPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E9CE7B2A1E7F84F70027FACF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E9CE7B2B1E7F84FF0027FACF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE71E7F84BD0027FACF /* SearchVolumesRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7B2C1E7F85070027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AF01E7F84BD0027FACF /* SearchVolumesListInteractorProtocol.swift */,
+				E9CE7AE61E7F84BD0027FACF /* SearchVolumesListPresenterProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E9CE7B2D1E7F85FD0027FACF /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7B331E7F862D0027FACF /* Protocols */,
+				E9CE7B321E7F86260027FACF /* Router */,
+				E9CE7B311E7F861F0027FACF /* Entity */,
+				E9CE7B301E7F86180027FACF /* Interactor */,
+				E9CE7B2F1E7F860E0027FACF /* Presenter */,
+				E9CE7B2E1E7F86080027FACF /* View */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		E9CE7B2E1E7F86080027FACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9CE7B2F1E7F860E0027FACF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E9CE7B301E7F86180027FACF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE21E7F84BD0027FACF /* CartVolumesDataStorage.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E9CE7B311E7F861F0027FACF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E9CE7B321E7F86260027FACF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE31E7F84BD0027FACF /* CartVolumesRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7B331E7F862D0027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E9CE7B341E7F867B0027FACF /* VolumeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7B3A1E7F86BC0027FACF /* Protocols */,
+				E9CE7B391E7F86B30027FACF /* Entity */,
+				E9CE7B381E7F86AC0027FACF /* Router */,
+				E9CE7B371E7F869E0027FACF /* Interactor */,
+				E9CE7B361E7F86950027FACF /* Presenter */,
+				E9CE7B351E7F868E0027FACF /* View */,
+			);
+			name = VolumeDetails;
+			sourceTree = "<group>";
+		};
+		E9CE7B351E7F868E0027FACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AEC1E7F84BD0027FACF /* VolumeDetailsView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9CE7B361E7F86950027FACF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AE91E7F84BD0027FACF /* VolumeDetailsPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E9CE7B371E7F869E0027FACF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AF21E7F84BD0027FACF /* VolumeDetailsInteractor.swift */,
+				E9CE7AE81E7F84BD0027FACF /* VolumeDetailsLocalStorage.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E9CE7B381E7F86AC0027FACF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AEA1E7F84BD0027FACF /* VolumeDetailsRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7B391E7F86B30027FACF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AED1E7F84BD0027FACF /* VolumeItemDetails.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E9CE7B3A1E7F86BC0027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AEB1E7F84BD0027FACF /* VolumeDetailsUIProtocol.swift */,
+				E9CE7AF31E7F84BD0027FACF /* VolumeDetailsInteractorProtocol.swift */,
+				E9CE7AF41E7F84BD0027FACF /* VolumeDetailsLocalStorageProtocol.swift */,
+				E9CE7AF51E7F84BD0027FACF /* VolumeDetailsPresenterProtocol.swift */,
+				E9CE7AF61E7F84BD0027FACF /* VolumeDetailsRouterProtocol.swift */,
+				E9CE7AF71E7F84BD0027FACF /* VolumeDetailsViewProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E9CE7B3B1E7F87520027FACF /* VolumesList */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7B411E7F87850027FACF /* Protocols */,
+				E9CE7B401E7F877E0027FACF /* Entity */,
+				E9CE7B3F1E7F87730027FACF /* Router */,
+				E9CE7B3E1E7F876A0027FACF /* Interactor */,
+				E9CE7B3D1E7F87630027FACF /* Presenter */,
+				E9CE7B3C1E7F875C0027FACF /* View */,
+			);
+			name = VolumesList;
+			sourceTree = "<group>";
+		};
+		E9CE7B3C1E7F875C0027FACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AFB1E7F84BD0027FACF /* VolumeListCell.xib */,
+				E9CE7AFA1E7F84BD0027FACF /* VolumeListCell.swift */,
+				E9CE7B011E7F84BD0027FACF /* VolumesListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9CE7B3D1E7F87630027FACF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AEE1E7F84BD0027FACF /* VolumesListPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E9CE7B3E1E7F876A0027FACF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AFE1E7F84BD0027FACF /* VolumesListInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E9CE7B3F1E7F87730027FACF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		E9CE7B401E7F877E0027FACF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AF81E7F84BD0027FACF /* VolumeItem.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E9CE7B411E7F87850027FACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE7AF91E7F84BD0027FACF /* VolumeItemUIProtocol.swift */,
+				E9CE7B021E7F84BD0027FACF /* VolumesListViewProtocol.swift */,
+				E9CE7B001E7F84BD0027FACF /* VolumesListRouterProtocol.swift */,
+				E9CE7AFF1E7F84BD0027FACF /* VolumesListInteractorProtocol.swift */,
+				E9CE7AFC1E7F84BD0027FACF /* VolumesDataStorageProtocol.swift */,
+				E9CE7AEF1E7F84BD0027FACF /* VolumesListPresenterProtocol.swift */,
+				E9CE7AFD1E7F84BD0027FACF /* VolumesListCellProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		FDBA1F2601E28401983F4D37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52416698B15211983CC9559C /* Pods_GoogleBooksTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +659,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 779069DF1E718E2F00714E1A /* Build configuration list for PBXNativeTarget "GoogleBooksTest" */;
 			buildPhases = (
+				30EB6E4C325EF81C510D1A81 /* [CP] Check Pods Manifest.lock */,
 				779069C91E718E2F00714E1A /* Sources */,
 				779069CA1E718E2F00714E1A /* Frameworks */,
 				779069CB1E718E2F00714E1A /* Resources */,
+				D232FD4896E1A94125CAD7AE /* [CP] Embed Pods Frameworks */,
+				AB63EB0D6C545ED20F195F21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +688,7 @@
 					779069CC1E718E2F00714E1A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 48K3XX9RX8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,7 +716,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CE7B1D1E7F84BD0027FACF /* VolumeListCell.xib in Resources */,
 				779069DB1E718E2F00714E1A /* LaunchScreen.storyboard in Resources */,
+				779069F51E71B56C00714E1A /* GoogleService-Info.plist in Resources */,
 				779069D81E718E2F00714E1A /* Assets.xcassets in Resources */,
 				779069D61E718E2F00714E1A /* Main.storyboard in Resources */,
 			);
@@ -132,13 +726,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30EB6E4C325EF81C510D1A81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB63EB0D6C545ED20F195F21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleBooksTest/Pods-GoogleBooksTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D232FD4896E1A94125CAD7AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleBooksTest/Pods-GoogleBooksTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		779069C91E718E2F00714E1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779069D31E718E2F00714E1A /* ViewController.swift in Sources */,
+				779069F31E71AF7F00714E1A /* LoginRouterProtocol.swift in Sources */,
+				E9CE7B171E7F84BD0027FACF /* VolumeDetailsPresenterProtocol.swift in Sources */,
+				E9CE7B131E7F84BD0027FACF /* SearchVolumesListView.swift in Sources */,
+				779069F11E7193C700714E1A /* LoginPresenterProtocol.swift in Sources */,
+				779069F71E71BB9700714E1A /* LoginPresenter.swift in Sources */,
+				E9CE7B1E1E7F84BD0027FACF /* VolumesDataStorageProtocol.swift in Sources */,
+				E9CE7B181E7F84BD0027FACF /* VolumeDetailsRouterProtocol.swift in Sources */,
+				E9CE7B201E7F84BD0027FACF /* VolumesListInteractor.swift in Sources */,
+				E9CE7AB61E7F636A0027FACF /* GPAuthorizer.swift in Sources */,
+				E9CE7B1C1E7F84BD0027FACF /* VolumeListCell.swift in Sources */,
+				E9CE7B081E7F84BD0027FACF /* SearchVolumesListPresenterProtocol.swift in Sources */,
+				779069D31E718E2F00714E1A /* LoginView.swift in Sources */,
+				E9CE7AE11E7F84410027FACF /* Volumes.xcdatamodeld in Sources */,
+				E9CE7AB11E7F62EC0027FACF /* AuthorizerProtocol.swift in Sources */,
+				E9CE7B1B1E7F84BD0027FACF /* VolumeItemUIProtocol.swift in Sources */,
+				779069EA1E718FB100714E1A /* LoginViewProtocol.swift in Sources */,
+				E9CE7ACF1E7F7D560027FACF /* UserProfileRouter.swift in Sources */,
+				E9CE7B251E7F84BD0027FACF /* VolumesSearchDataStorage.swift in Sources */,
+				E9CE7AC51E7F75600027FACF /* UserProfilePresenterProtocol.swift in Sources */,
+				E9CE7AB51E7F636A0027FACF /* FBAuthorizer.swift in Sources */,
+				E9CE7AC11E7F6FED0027FACF /* UserProfileViewProtocol.swift in Sources */,
+				779069EC1E7190F800714E1A /* LoginInteractorProtocol.swift in Sources */,
+				E9CE7B151E7F84BD0027FACF /* VolumeDetailsInteractorProtocol.swift in Sources */,
+				E9CE7AC71E7F77B20027FACF /* UserProfileInteractorProtocol.swift in Sources */,
+				779069F91E71BCA400714E1A /* LoginRouter.swift in Sources */,
+				E9CE7AC31E7F734C0027FACF /* UserProfileView.swift in Sources */,
+				E9CE7ADF1E7F84410027FACF /* Volume+CoreDataProperties.swift in Sources */,
+				E9CE7B231E7F84BD0027FACF /* VolumesListView.swift in Sources */,
+				E9CE7B141E7F84BD0027FACF /* VolumeDetailsInteractor.swift in Sources */,
+				E9CE7AD81E7F83CA0027FACF /* UISearchBar+ActivityView.swift in Sources */,
+				E9CE7B0E1E7F84BD0027FACF /* VolumeDetailsView.swift in Sources */,
 				779069D11E718E2F00714E1A /* AppDelegate.swift in Sources */,
+				E9CE7B1A1E7F84BD0027FACF /* VolumeItem.swift in Sources */,
+				779069FD1E71CE4900714E1A /* UserInfoProtocol.swift in Sources */,
+				E9CE7AC91E7F78790027FACF /* UserProfilePresenter.swift in Sources */,
+				E9CE7AD31E7F837E0027FACF /* RequestAPI.swift in Sources */,
+				E9CE7AE01E7F84410027FACF /* Volume+CoreDataClass.swift in Sources */,
+				E9CE7B041E7F84BD0027FACF /* CartVolumesDataStorage.swift in Sources */,
+				E9CE7B211E7F84BD0027FACF /* VolumesListInteractorProtocol.swift in Sources */,
+				E9CE7B241E7F84BD0027FACF /* VolumesListViewProtocol.swift in Sources */,
+				E9CE7AD91E7F83CA0027FACF /* UITableViewCell+Reuse.swift in Sources */,
+				E9CE7B191E7F84BD0027FACF /* VolumeDetailsViewProtocol.swift in Sources */,
+				E9CE7B051E7F84BD0027FACF /* CartVolumesRouter.swift in Sources */,
+				E9CE7B101E7F84BD0027FACF /* VolumesListPresenter.swift in Sources */,
+				E9CE7B091E7F84BD0027FACF /* SearchVolumesRouter.swift in Sources */,
+				E9CE7B0B1E7F84BD0027FACF /* VolumeDetailsPresenter.swift in Sources */,
+				E9CE7B161E7F84BD0027FACF /* VolumeDetailsLocalStorageProtocol.swift in Sources */,
+				E9CE7ACD1E7F7CF90027FACF /* UserProfileRouterProtocol.swift in Sources */,
+				E9CE7B0F1E7F84BD0027FACF /* VolumeItemDetails.swift in Sources */,
+				E9CE7AD41E7F837E0027FACF /* RequestAPIProtocols.swift in Sources */,
+				E9CE7B061E7F84BD0027FACF /* SearchVolumesListInteractor.swift in Sources */,
+				E9CE7B221E7F84BD0027FACF /* VolumesListRouterProtocol.swift in Sources */,
+				E9CE7ACB1E7F7C090027FACF /* UserProfileInteractor.swift in Sources */,
+				E9CE7B0A1E7F84BD0027FACF /* VolumeDetailsLocalStorage.swift in Sources */,
+				E9CE7B111E7F84BD0027FACF /* VolumesListPresenterProtocol.swift in Sources */,
+				E9CE7B1F1E7F84BD0027FACF /* VolumesListCellProtocol.swift in Sources */,
+				E9CE7B121E7F84BD0027FACF /* SearchVolumesListInteractorProtocol.swift in Sources */,
+				E9CE7AB81E7F63E10027FACF /* UserInfo.swift in Sources */,
+				E9CE7B0C1E7F84BD0027FACF /* VolumeDetailsRouter.swift in Sources */,
+				E9CE7B071E7F84BD0027FACF /* SearchVolumesListPresenter.swift in Sources */,
+				779069FB1E71BDE700714E1A /* LoginInteractor.swift in Sources */,
+				E9CE7B0D1E7F84BD0027FACF /* VolumeDetailsUIProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,26 +959,35 @@
 		};
 		779069E01E718E2F00714E1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1A0C1E9BDA8E073A1C2377 /* Pods-GoogleBooksTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 48K3XX9RX8;
 				INFOPLIST_FILE = GoogleBooksTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.metaleagle.GoogleBooksTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleBooksTest/GoogleBooksTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		779069E11E718E2F00714E1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A589420DCC704F5FC212C2 /* Pods-GoogleBooksTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 48K3XX9RX8;
 				INFOPLIST_FILE = GoogleBooksTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.metaleagle.GoogleBooksTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleBooksTest/GoogleBooksTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,8 +1011,22 @@
 				779069E11E718E2F00714E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9CE7ADD1E7F84410027FACF /* Volumes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9CE7ADE1E7F84410027FACF /* Volumes.xcdatamodel */,
+			);
+			currentVersion = E9CE7ADE1E7F84410027FACF /* Volumes.xcdatamodel */;
+			path = Volumes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 779069C51E718E2F00714E1A /* Project object */;
 }

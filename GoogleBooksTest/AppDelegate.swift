@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+//        let searchView = SearchVolumesRouter.listVolumesModule()
+//        searchView.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named:"search"), selectedImage: nil)
+//        let cartView = CartVolumesRouter.listVolumesModule()
+//        
+//        cartView.tabBarItem = UITabBarItem(title: "Cart", image: UIImage(named:"cart"), selectedImage: nil)
+//        let tabBarController = UITabBarController()
+//        tabBarController.viewControllers = [searchView, cartView]
+        let authView = LoginRouter.loginModule()
+        window?.rootViewController = authView
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -40,6 +57,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let googleDidHandle = GIDSignIn.sharedInstance().handle(
+            url as URL!,
+            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String,
+            annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        let facebookDidHandle = FBSDKApplicationDelegate.sharedInstance().application(
+            app,
+            open: url as URL!,
+            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String,
+            annotation: options [UIApplicationOpenURLOptionsKey.annotation])
+        
+        return googleDidHandle || facebookDidHandle
+        
+    }
+    
+    // MARK: - Core Data stack
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "Volumes")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+
 
 
 }

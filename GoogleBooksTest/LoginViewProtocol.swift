@@ -6,4 +6,9 @@
 //  Copyright © 2017 MetalEaglE. All rights reserved.
 //
 
-import Foundation
+protocol LoginViewProtocol: class{
+    var presenter: LoginPresenterProtocol? { get set }
+    
+    func showLoading(_ isLoading: Bool)
+    func displayErrorWithMessage(_ message: String)
+}
