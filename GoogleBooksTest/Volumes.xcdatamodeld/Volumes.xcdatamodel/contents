@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Volume" representedClassName="Volume" syncable="YES">
+        <attribute name="authors" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="coverData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="infoLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volumeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volumeID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Volume" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>

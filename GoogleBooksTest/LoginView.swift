@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class loginView: UIViewController, LoginViewProtocol {
+    var presenter: LoginPresenterProtocol?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func showLoading(_ isLoading: Bool) {
+        
+    }
+    
+    func displayErrorWithMessage(_ message: String){
+        
+    }
 
 }
 
