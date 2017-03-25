@@ -30,6 +30,18 @@ class VolumeDetailsInteractor: VolumeDetailsInteractorProtocol{
     }()
     
     func updateVolumeDetails() {
+        if self.localDataStorage.isVolumeInCart(){
+            do{
+                try self.volumeDetails = self.localDataStorage.getVolumeDetails()
+                return
+            }
+            catch LocalStorageError.notFoundInLocalStorage{
+                self.localDataStorage.removeVolumeFromCart()
+            }
+            catch{
+                
+            }
+        }
         self.requestAPI?.sendRequest(withSuccess: { (response) in
             if let json = response.JSONBody(){
                 self.volumeDetails = VolumeItemDetails(json)

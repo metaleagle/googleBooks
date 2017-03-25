@@ -64,11 +64,11 @@ class FBAuthorizer: AuthorizerProtocol{
 }
 
 extension UserInfo {
-    init?(_ withGPUserInfoDictionary: Dictionary<String, Any>){
-        if let email = withGPUserInfoDictionary["email"] as? String{
-            let name = withGPUserInfoDictionary["first_name"] as? String
-            let lastName = withGPUserInfoDictionary["last_name"] as? String
-            let picture = withGPUserInfoDictionary["picture"] as? Dictionary<String, Any>
+    init?(_ withFBUserInfoDictionary: Dictionary<String, Any>){
+        if let email = withFBUserInfoDictionary["email"] as? String{
+            let name = withFBUserInfoDictionary["first_name"] as? String
+            let lastName = withFBUserInfoDictionary["last_name"] as? String
+            let picture = withFBUserInfoDictionary["picture"] as? Dictionary<String, Any>
             let data = picture?["data"] as? Dictionary<String, Any>
             let url = data?["url"] as? String
             self.init(firstName: name, lastName: lastName, email: email, userpicURL: url)

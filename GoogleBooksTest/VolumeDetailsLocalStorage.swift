@@ -8,6 +8,10 @@
 import CoreData
 import UIKit
 
+enum LocalStorageError: Error{
+    case notFoundInLocalStorage
+}
+
 class VolumeDetailsLocalStorage: NSObject, VolumeDetailsLocalStorageProtocol, NSFetchedResultsControllerDelegate{
     let volumeID: String
     var volumeUpdatedAction: (() -> ())?
@@ -68,6 +72,15 @@ class VolumeDetailsLocalStorage: NSObject, VolumeDetailsLocalStorageProtocol, NS
         if nil != self.volumeUpdatedAction{
             self.volumeUpdatedAction!()
         }
+    }
+    
+    func getVolumeDetails() throws -> VolumeDetailsUIProtocol {
+        guard let storedVolume = self.getLocalStoredVolume() else {
+            throw LocalStorageError.notFoundInLocalStorage
+        }
+        let volumeDetails = VolumeItemDetails(with: storedVolume.volumeID!, title: storedVolume.title!, authors:storedVolume.authors, description: storedVolume.volumeDescription, coverImageURL: storedVolume.thumbURL, selfLink: storedVolume.infoLink)
+        return volumeDetails
+        
     }
 
 }

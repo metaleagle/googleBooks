@@ -34,11 +34,11 @@ class LoginInteractor: LoginInteractorProtocol {
     }
     
     func authorizationCanceled(withAuthorizer authorizer: AuthorizerProtocol) {
-        
+        self.presenter?.loginCanceled(with: authorizer)
     }
     
     func authorizationFailed(withAuthorizer authorizer: AuthorizerProtocol, withError error: String) {
-        
+        self.presenter?.failedToLoginWithError(error)
     }
     
     func loggedOut(withAuthorizer authorizer: AuthorizerProtocol) {

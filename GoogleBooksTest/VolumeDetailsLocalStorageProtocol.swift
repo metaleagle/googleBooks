@@ -11,6 +11,6 @@ protocol VolumeDetailsLocalStorageProtocol{
     func isVolumeInCart() -> Bool
     func addVolumeToCart(volumeToBeAdded:VolumeDetailsUIProtocol)
     func removeVolumeFromCart()
-    func getLocalStoredVolume()  -> Volume?
+    func getVolumeDetails() throws -> VolumeDetailsUIProtocol
     var volumeUpdatedAction: (() -> ())? { get set }
 }
